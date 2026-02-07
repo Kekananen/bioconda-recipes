@@ -1,4 +1,4 @@
-{% set version = "0.26.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: fastp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/OpenGene/fastp/archive/v{{ version }}.tar.gz
-  sha256: ab5396f448bece92e599e4d3acc48751fc46f0f43333ca271d229aa95dc47c4e
+  sha256: d3e909466fc893a92434fd68ddc3efd9d732447a0a55b7c77b8d0b55b0681f69
 
 build:
   number: 0

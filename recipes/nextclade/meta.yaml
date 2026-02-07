@@ -1,5 +1,5 @@
 {% set name = "nextclade" %}
-{% set version = "3.14.5" %}
+{% set version = "3.18.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   - url: https://github.com/nextstrain/nextclade/releases/download/{{ version }}/{{ name }}-x86_64-unknown-linux-gnu   # [linux64]
-    sha256: 5dec6226828dbbb05b71f51289267c5737817629ac56cb0295f44cf726fbd863                                           # [linux64]
+    sha256: f08e23f8b73da60453b70356326cea75b56c46ed13f3e9ce694d6b1f590df7c1                                           # [linux64]
   - url: https://github.com/nextstrain/nextclade/releases/download/{{ version }}/{{ name }}-aarch64-unknown-linux-gnu  # [aarch64]
-    sha256: 0970456161eb5f5e31b5aa10b5ce9f8c2d1bad1d171bcc46f2fc32ccc7d1cd9f                                           # [aarch64]
+    sha256: 33fcb722aa10fecf94ea7d1cf8135f5a37c1081c5d84b836f43533a2a9877a48                                           # [aarch64]
   - url: https://github.com/nextstrain/nextclade/releases/download/{{ version }}/{{ name }}-x86_64-apple-darwin        # [osx and x86_64]
-    sha256: 577c96ed16a081d0d57157b3aba477cadf44faaac06aa0bcc775f93769fc5939                                           # [osx and x86_64]
+    sha256: af983f1cc10d01141272647a6f1ac6779800d30433e153387d5e413fca665c35                                           # [osx and x86_64]
   - url: https://github.com/nextstrain/nextclade/releases/download/{{ version }}/{{ name }}-aarch64-apple-darwin       # [osx and arm64]
-    sha256: 02ccf9281d723d71ac857a540a31772ceeb9ec53b6e5afaee80b1059311ec1c0                                           # [osx and arm64]
+    sha256: 3737ef6560e111da8e9dfe4297668d46857e100978e28fe9b1247ea892704084                                           # [osx and arm64]
 
 build:
   number: 0
