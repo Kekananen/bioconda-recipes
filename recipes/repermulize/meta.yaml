@@ -27,7 +27,7 @@ requirements:
     - bioconductor-ggtree=3.6.0
     - bioconductor-biomformat=1.26.0
     - bioconductor-qvalue=2.30.0
-    - r-plotly <=4.10.4
+    - r-plotly<=4.10.4
     - r-kableextra=1.4.0
     - r-dt=0.33
     - r-settings=0.2.7
@@ -51,7 +51,7 @@ requirements:
     - bioconductor-ggtree=3.6.0
     - bioconductor-biomformat=1.26.0
     - bioconductor-qvalue=2.30.0
-    - r-plotly <=4.10.4
+    - r-plotly<=4.10.4
     - r-kableextra=1.4.0
     - r-dt=0.33
     - r-settings=0.2.7
