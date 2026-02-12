@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - r-base >=4.2,<4.3.0a0
+    - r-base >=4.2
     - r-phylolm =2.6.2
     - bioconductor-ggtree =3.6.0
     - bioconductor-biomformat =1.26.0
@@ -46,7 +46,7 @@ requirements:
     - r-ashr =2.2_54
     - bioconductor-s4vectors =0.36.0
   run:
-    - r-base  >=4.2,<4.3.0a0
+    - r-base  >=4.2
     - r-phylolm =2.6.2
     - bioconductor-ggtree =3.6.0
     - bioconductor-biomformat =1.26.0
