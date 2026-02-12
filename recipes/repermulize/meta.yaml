@@ -72,7 +72,7 @@ requirements:
 
 test:
   commands:
-    - '$R -q -e "library(repermulize)"'
+    - '$R -e "library(repermulize)"'
 
 about:
   home: "https://github.com/pbradleylab/phylogenize"
