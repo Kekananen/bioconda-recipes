@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - r-base >=4.2,<=4.3
+    - r-base >=4.2,<4.3.0a0
     - vsearch =2.30.0
     - repermulize =1.0.0
     - conda-forge::r-stringi >=1.8.0
@@ -46,7 +46,7 @@ requirements:
     - bioconductor-maaslin2 =1.12.0
     - bioconductor-clusterprofiler =4.6.0
   run:
-    - r-base >=4.2,<=4.3
+    - r-base >=4.2,<4.3.0a0
     - vsearch =2.30.0
     - repermulize =1.0.0
     - conda-forge::r-stringi >=1.8.0
