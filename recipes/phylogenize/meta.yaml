@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - r-base>=4.5
+    - r-base >=4.5
     - vsearch =2.30.6
     - repermulize =1.1.2
     - r-stringi =1.8.7
@@ -67,7 +67,7 @@ requirements:
     - bioconductor-phyloseq =1.54.0
     - bioconductor-microbiome =1.32.0
   run:
-    - r-base>=4.5
+    - r-base >=4.5
     - vsearch =2.30.6
     - repermulize =1.1.2
     - r-stringi =1.8.7
