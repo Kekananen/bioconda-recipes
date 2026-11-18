@@ -1,0 +1,5 @@
+--- a/package/phylogenize/DESCRIPTION
++++ b/package/phylogenize/DESCRIPTION
+@@ -3 +3 @@
+-Version: 2.0.1
++Version: 2.0.4
