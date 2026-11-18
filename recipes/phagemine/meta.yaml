@@ -1,0 +1,71 @@
+{% set name = "phagemine" %}
+{% set version = "1.4.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/emmannaemeka/PhageMine/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 336b22a3a87700680e71484a304cb9d41182e144174c3d8684c0f50b87a2c6ed
+
+build:
+  number: 0
+  noarch: python
+  run_exports:
+    - {{ pin_subpackage('phagemine', max_pin="x") }}
+  entry_points:
+    - phagemine = phagemine.cli:main
+    - phagemine-gui = phagemine.gui.launcher:main
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=68
+  run:
+    - python >=3.10
+    - biopython >=1.85,<2
+    - openpyxl >=3.1,<4
+    - pyyaml >=6,<7
+    - psutil >=5,<8
+    - matplotlib-base >=3.7,<4
+    - streamlit >=1.49,<2
+    - pyhmmer >=0.10,<0.13
+    - pyrodigal ==3.7.1
+    - pyrodigal-gv ==0.3.2
+    - pyrodigal-rv ==0.1.0
+    - phanotate >=1.6.7
+    - prodigal
+    - hmmer >=3.4
+    - mmseqs2
+    - diamond
+    - mash >=2.3
+    - blast
+    - trnascan-se >=2.0.12
+    - aragorn
+
+test:
+  imports:
+    - phagemine
+    - phagemine.initiator_guard
+    - phagemine.reviewer_package
+  commands:
+    - phagemine --version
+    - phagemine --help
+    - phagemine batch --help
+    - phagemine extract --help
+    - phagemine rna --help
+    - phagemine curate --help
+
+about:
+  home: https://github.com/emmannaemeka/PhageMine
+  dev_url: https://github.com/emmannaemeka/PhageMine
+  summary: Evidence-based bacteriophage genome annotation, start-codon curation and discovery mining
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+
+extra:
+  maintainers:
+    - emmannaemeka

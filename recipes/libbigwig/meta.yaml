@@ -1,5 +1,5 @@
-{% set version = "0.4.8" %}
-{% set sha256 = "10e904ea6eab4c9926dd938050af888bebe6281e8d933237e4a254cb9d3063b1" %}
+{% set version = "0.4.11" %}
+{% set sha256 = "a593d1cb4fa329cafefbfb0809e8bdc2f8f2bedd15a709fdb4b4cb24c1338f0c" %}
 
 package:
   name: libbigwig
@@ -20,6 +20,7 @@ requirements:
   build:
     - make
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
     - libcurl
     - zlib

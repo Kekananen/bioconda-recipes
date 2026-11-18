@@ -1,4 +1,4 @@
-{% set version = "1.19.4" %}
+{% set version = "1.19.7" %}
 
 package:
   name: nanoget
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/nanoget/nanoget-{{ version }}.tar.gz
-  sha256: 313e5b6d65bfce258e7c5153ef73ac12d226dad4174072f89820b439196fa2f5
+  sha256: d95c324a40802e4a233d2a9e38c424a396e182fb03c2c5de7392bb925dbaabed
 
 build:
   number: 0

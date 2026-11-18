@@ -1,6 +1,6 @@
 {% set name = "tw"%}
-{% set version = "0.29.1" %}
-{% set sha256 = "08c2ad98f99e8f65161a664e23545b4df23e0c0ba6f5e1095ff67cdfef0d78ea" %}
+{% set version = "0.42.0" %}
+{% set sha256 = "36d27edd26117b06ef416f2ab95ecb54ed2ea78370107eee25f0860adf707b0c" %}
 
 package:
   name: tower-cli
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   run_exports:
     - {{ pin_subpackage("tower-cli", max_pin="x.x") }}

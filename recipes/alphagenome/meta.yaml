@@ -1,5 +1,5 @@
 {% set name = "alphagenome" %}
-{% set version = "0.6.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f2ce286a5216884f98c95b59fb57b12ef6056d46d873fb7260ff8fce27c2e7d9
+  sha256: 3afc81a6aeff9c1374fe2bf686b2340a248511da9e2c451b46527feb2de5d8c9
 
 build:
   number: 0

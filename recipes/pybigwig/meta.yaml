@@ -1,5 +1,5 @@
 {% set name = "pybigwig" %}
-{% set version = "0.3.25" %}
+{% set version = "0.3.30" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c717b0222e6677956fd659c8a21650983679ffb3314427d7f68d2910fad202a
+  sha256: 0aadc9c43969c4cde2cd502902fe7931ba5e851462862e6c25d15758811ec6e0
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py < 39]
   script:
     - export C_INCLUDE_PATH="$PREFIX/include"

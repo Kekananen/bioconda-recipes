@@ -1,5 +1,5 @@
 {% set name = "autocycler" %}
-{% set version = "0.6.2" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/rrwick/Autocycler/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5bb281c3216ac266fc17fcda74b99fea11fdf7b01b5e32656d515fe470109efa
+  sha256: 086e307fa45978ceac16c4916e36455d8796a930acc4d6ec911ca3e034a81c23
 
 build:
   number: 0
@@ -21,13 +21,14 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    - clangdev
     - make
     - cmake
 
 test:
   commands:
     - autocycler --help
+    - test -f "$PREFIX/share/autocycler/pipelines/README.md"
+    - test -f "$PREFIX/share/autocycler/pipelines/Fast_Autocycler_with_Flye_fallback_by_Ryan_Wick/autocycler_and_flye.py"
 
 about:
   home: "https://github.com/rrwick/Autocycler"

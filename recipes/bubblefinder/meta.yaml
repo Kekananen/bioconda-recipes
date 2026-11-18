@@ -1,10 +1,11 @@
 {% set name = "bubblefinder" %}
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 {% set build_number = 0 %}
 
 {% set ogdf_tag = "elderberry-202309" %}
 {% set vendored_log_version = "1.15.3" %}
 {% set vendored_log_tag = "v" + vendored_log_version %}
+{% set spqr_rust_commit = "e285da07890da53f424cb38a1d6ff850707914d3" %}
 
 {% set sdsl_commit = "349de444ded81547cb55a718abeada41960531b5" %}
 {% set libhandlegraph_commit = "b95f7637968b4c8c3c4d1bad13aaa1835c607fe0" %}
@@ -20,8 +21,11 @@ package:
 
 source:
   - url: https://github.com/algbio/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 02d72996a1abee106833f682c4dfa19416d0bbba9232d740ea960cea7e934e8e
+    sha256: 9e3db4c948c58baf622a68fa45b0e3fb0e2ae407d70c1eeb47437ff5bcab4b5b
     folder: .
+  - url: https://github.com/algbio/spqr-rust/archive/{{ spqr_rust_commit }}.tar.gz
+    sha256: 577fd9b330ca9835ea0fa22401152dc4b65a734c7cfa7f3605b473c02045c160
+    folder: spqr-rust-src
   - url: https://github.com/ogdf/ogdf/archive/refs/tags/{{ ogdf_tag }}.tar.gz
     sha256: 3438205d3a6ff69d24c3a6db748d2a5a78688605baf3092456073901a2b623f3
     folder: ogdf-src
@@ -60,6 +64,7 @@ requirements:
     - cmake
     - make
     - pkg-config
+    - {{ compiler('rust') }}
     - libgomp        # [linux]
     - llvm-openmp    # [osx]
   host:
@@ -73,13 +78,16 @@ requirements:
 
 test:
   commands:
+    - BubbleFinder --version
     - BubbleFinder --help
+    - BubbleFinder d-bubbles --help
+    - BubbleFinder ultrabubbles --d-bubbles --help
     - test -x "${PREFIX}/bin/snarls_bf"
 
 about:
   home: https://github.com/algbio/BubbleFinder
   license: MIT
-  summary: "BubbleFinder - detecting superbubbles/snarls in graphs"
+  summary: "Find superbubbles, ultrabubbles, snarls and d-bubbles in graphs"
 
 extra:
   recipe-maintainers:
