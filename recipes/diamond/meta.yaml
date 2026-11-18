@@ -1,6 +1,6 @@
 {% set name = "diamond" %}
-{% set version = "2.2.3" %}
-{% set sha256 = "6199f96b294adcc2f4fde72deaa5757cb5b4ab4657c0d84c866047a70031742e" %}
+{% set version = "2.2.9" %}
+{% set sha256 = "9c7e71a096c2a722b2f5d8c0b17866568b58c672c702492b8e8dfbce57472d66" %}
 
 package:
   name: {{ name }}
@@ -12,6 +12,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [osx and x86_64]
   run_exports:
     - {{ pin_subpackage('diamond', max_pin="x") }}
 

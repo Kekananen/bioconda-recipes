@@ -1,5 +1,5 @@
 {% set name = "plotnado" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plotnado-{{ version }}.tar.gz
-  sha256: f21241afdedd8a74e347fd6ac238661ceee5c397ec90f314235ce221b7518e5d
+  sha256: fb1e90dcbddfe572211ddc74af76984269534eae59067964b73f5657d57aff15
 
 build:
   noarch: python

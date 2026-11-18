@@ -1,5 +1,5 @@
 {% set name = "omero-annotate-ai" %}
-{% set version = "0.3.0" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/omero_annotate_ai-{{ version }}.tar.gz
-  sha256: 25583daa6315a4c0580b7dc3a759fb6584787c51a8d4098ef151aca6efad85bf
+  sha256: 4630bfd3663b9ab3190aa66f60e25b69a99f2a0b0b9360e3381be11a610e9f85
 
 build:
   noarch: python

@@ -1,6 +1,6 @@
 {% set name = "hyphy" %}
-{% set version = "2.5.100" %}
-{% set sha256 = "49ebc745907b37214da388341772e25df253244e02f3ab204bf0e27be84fcd8f" %}
+{% set version = "2.5.104" %}
+{% set sha256 = "608b16322071453812be3c032d9ab575c74d245969c03dca298b2a041933d6a0" %}
 
 package:
   name: {{ name }}
@@ -28,6 +28,7 @@ requirements:
     - openmpi
     - libcurl
     - libblas
+    - libcblas
     - zlib
   run:
     - llvm-openmp  # [osx]

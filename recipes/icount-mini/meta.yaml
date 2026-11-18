@@ -1,5 +1,5 @@
 {% set name = "iCount-Mini" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://github.com/ulelab/iCount-Mini/archive/refs/tags/v{{ version }}.tar.gz"
-  sha256: a248b4017e9886502f71e0b1d53f6fa90b278d88448b046635c672b8f05c65fb
+  sha256: 20073869a64081531ed7c976680ddbb3bf7e43198ce42fc3293c2a2fb36e3b09
 
 build:
   number: 0

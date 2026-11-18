@@ -1,6 +1,6 @@
 {% set name = "perl-mozilla-ca" %}
-{% set version = "20250602" %}
-{% set sha256 = "adeac0752440b2da094e8036bab6c857e22172457658868f5ac364f0c7b35481" %}
+{% set version = "20261105" %}
+{% set sha256 = "b29dfd05d0f0038091fab9d7a184e8e476bc24fb5de5963cd23d21d262e0be10" %}
 
 package:
   name: {{ name }}

@@ -1,5 +1,5 @@
 {% set name = "bio" %}
-{% set version = "1.8.3" %}
+{% set version = "1.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bio-{{ version }}.tar.gz
-  sha256: 5c01920d842fdc7a15212c1af50296db30fa76a3bd3597f8c65724b294557937
+  sha256: f229f8a4fb0e3bbf2d6203b55de6a5915111aa1943ab09297c846970fe634437
 
 build:
   number: 0
